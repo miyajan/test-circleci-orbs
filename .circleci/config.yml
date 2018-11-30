@@ -1,9 +1,11 @@
 version: 2.1
 
 orbs:
+  prettier: miyajan/prettier@0.1.1
   shellcheck: circleci/shellcheck@1.2.0
 
 workflows:
   pipeline:
     jobs:
+      - prettier/check-yaml
       - shellcheck/check
